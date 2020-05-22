@@ -16,6 +16,7 @@ class myHandler(BaseHTTPRequestHandler):
 
 try:
     server = HTTPServer(('', 80), myHandler)
+    print('start listen 80...')
     server.serve_forever()
 except KeyboardInterrupt:
     server.socket.close()
